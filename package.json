@@ -16,7 +16,8 @@
     "tailwindcss": "^4.1.14",
     "web-vitals": "^2.1.0"
   },
-  "scripts": {
+  "scripts": { 
+    "prebuild": "node -e \"const fs=require('fs');const p='postcss.config.js';console.log('[SMOKE] postcss.config.js exists =',fs.existsSync(p)); if(fs.existsSync(p)) console.log('[SMOKE] content\\n'+fs.readFileSync(p,'utf8'));\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
