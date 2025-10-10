@@ -1,8 +1,6 @@
-// postcss.config.js
-console.log("[POSTCSS] loaded from:", __filename);
-module.exports = {
-  plugins: [
-    require('@tailwindcss/postcss'),
-    require('autoprefixer'),
-  ],
-};
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {}, // tailwindcss 대신 @tailwindcss/postcss 사용
+    autoprefixer: {},
+  }
+}
